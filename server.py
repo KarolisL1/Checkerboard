@@ -13,5 +13,9 @@ def hello_world2():
 def hello_world3(number, number2):
     return render_template('index.html', number=number, number2=number2)
 
+@app.route('/<int:number>/<color>') #just to test
+def hello_world4(number, color):
+    return render_template('index.html', number=number, number2=number, color=color)
+
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
